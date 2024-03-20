@@ -99,12 +99,10 @@ const OurProjects = () => {
         {/* bird naming */}
 
         {/* videos  */}
-        {/* video one */}
-
-        {/* video two */}
+      
       </div>
       <div className=" w-screen grid grid-cols-1 md:grid-cols-2 place-items-center">
-        {/* first i frame */}
+        {/* first i frame
         <div className="md:w-1/2">
           <iframe
             className="w-screen h-80 md:w-full"
@@ -115,10 +113,10 @@ const OurProjects = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-        </div>
+        </div> */}
 
         {/* second i frame */}
-        <div className="md:w-1/2">
+        {/* <div className="md:w-1/2 mt-4 mb-3">
           <iframe
             className="w-screen h-80 md:w-full"
             height="315"
@@ -128,7 +126,7 @@ const OurProjects = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-        </div>
+        </div> */}
       </div>
     </div>
   );
