@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
   return (
     <div
-      className="w-screen h-screen about relative flex"
+      className="w-screen h-screen about relative flex pb-12"
       style={{
         backgroundImage: 'url(../ProjectsFiles/bird-rwandan1.jpeg',
         backgroundRepeat: 'no-repeat',
