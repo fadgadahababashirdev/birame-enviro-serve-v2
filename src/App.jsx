@@ -1,6 +1,7 @@
 import React from 'react';
 import AllPages from './Pages/AllPages';
 import { Routes, Route } from 'react-router-dom';
+import './App.css';
 // components imports
 import SwiperAndNavbar from './Pages/SwiperAndNavbar';
 import OurProjects from './components/Projescts/OurProjects';
@@ -19,11 +20,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<AllPages />}></Route>
         <Route path="/SwipperAndNavbar" element={<SwiperAndNavbar />} />
-        <Route path="/Projects" element={<OurProjects />} />
-        <Route path="/Resorces" element={<Resource />} />
-        <Route path="/About us" element={<About />} />
-        <Route path="/What-we-do" element={<WhatWeDo />} />
-        <Route path ="/what-we-do/:id"element={<SingleWeDo/>}></Route>
+        <Route path="/Projects" element={<OurProjects/>} />
+        <Route path="/Resource" element={<Resource/>} />
+        <Route path="/About us" element={<About/>}/>
+        <Route path="/What-we-do" element={<WhatWeDo/>} />
+        <Route path="/what-we-do/:id" element={<SingleWeDo/>}></Route>
       </Routes>
     </div>
   );

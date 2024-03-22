@@ -8,7 +8,7 @@ const SwiperAndNavbar = () => {
       <div>
         <Swiper />
       </div>
-      <div className="absolute z-20 top-0 left-0">
+      <div className="absolute z-30 top-0 left-0">
         <Navbar />
       </div>
       <div className="absolute top-1/2  z-20">

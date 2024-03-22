@@ -38,10 +38,9 @@ export default () => {
             className="w-screen h-screen"
           />
         </SwiperSlide>
-        ...
-      </Swiper>
-      <div className="absolute z-10 top-0 left-0 bg-slate-300 w-screen h-screen opacity-30 "></div>
       
+      </Swiper>
+      <div className="absolute z-20 top-0 left-0 bg-slate-300 w-screen h-screen opacity-30 "></div>
     </div>
   );
 };

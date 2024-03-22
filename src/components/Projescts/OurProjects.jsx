@@ -1,16 +1,23 @@
 import React from 'react';
 import './styles.css';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 const OurProjects = () => {
   return (
+   <div id="ourProjects">
+     <div className="my-3 ml-3 flex items-center justify-center">
+        {' '}
+        <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />
+        <h1 className="mx-5 text-2xl text-gray-400 md:text-2xl">Our Projects</h1>
+      </div>
     <div className="py-3">
-      <h1 className="text-center font-semibold md:text-2xl">Our Projects</h1>
+      <h1 className=""></h1>
       <p className="text-center text-gray-500 font-semibold lg:text-2xl px-20 xl:px-80 mt-3">
         Biodiversity within natural and human-altered landscapes in rural and
         urban areas is well conserved and derived ecosystem services are
         flourishing
       </p>
       {/* projects */}
-      <div className="w-screen px-12 py-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 ">
+      <div className="w-screen px-2 py-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3  ">
         {/* conserving remnant eco sysytem div */}
         <div>
           <div>
@@ -99,7 +106,6 @@ const OurProjects = () => {
         {/* bird naming */}
 
         {/* videos  */}
-      
       </div>
       <div className=" w-screen grid grid-cols-1 md:grid-cols-2 place-items-center">
         {/* first i frame
@@ -129,6 +135,7 @@ const OurProjects = () => {
         </div> */}
       </div>
     </div>
+   </div>
   );
 };
 
