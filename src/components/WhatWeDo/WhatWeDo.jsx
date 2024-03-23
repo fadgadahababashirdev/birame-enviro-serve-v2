@@ -23,7 +23,7 @@ const WhatWeDo = () => {
   };
 
   return (
-    <div className="mt-12">
+    <div className="mt-12"id="whatwedo">
       <div className="mt-12 ml-3 flex items-center justify-center">
         {' '}
         <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />

@@ -3,7 +3,7 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 import './styles.css';
 const Team = () => {
   return (
-    <div className="mt-12">
+    <div className="mt-12"id="team">
       <div className="my-3 ml-3 flex items-center justify-center">
         {' '}
         <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />

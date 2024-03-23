@@ -27,14 +27,14 @@ export default () => {
         <SwiperSlide>
           <img
             src="../public/cover1.jpeg"
-            alt="cover image one"
+            alt="image one"
             className="w-screen h-screen"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="../public/cover2.jpeg"
-            alt="cover image two"
+            alt=" image two"
             className="w-screen h-screen"
           />
         </SwiperSlide>

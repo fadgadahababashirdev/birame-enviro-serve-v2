@@ -6,13 +6,13 @@ import './styles.css';
 
 const Resource = () => {
   return (
-    <div className="mt-12" id="Resource">
+    <div className="py-30" id="Resource">
       <div className="my-3 ml-3 flex items-center justify-center">
         {' '}
         <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />
-        <h1 className="mx-5 text-2xl text-gray-400 md:text-2xl">Resources</h1>
+        <h1 className="mx-5 text-2xl text-gray-400 md:text-4xl">Resources</h1>
       </div>
-      <div className="blue grid p-5 bg-slate-50 gap-3 grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
+      <div className="blue grid p-5 bg-slate-50 gap-3 grid-cols-1  md:grid-cols-2 px-12 lg:grid-cols-3">
         {/* conservation of natural landScapes */}
         <div className="card white p-5 bg-white lg:py-32">
           <div className="content">

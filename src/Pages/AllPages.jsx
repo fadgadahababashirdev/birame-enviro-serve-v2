@@ -5,6 +5,7 @@ import Resource from '../components/Resources/Resource';
 import About from '../components/About/About';
 import WhatWeDo from '../components/WhatWeDo/WhatWeDo';
 import Team from '../components/Team/Team';
+import Footer from '../components/Footer/Footer';
 
 const AllPages = () => {
   return (
@@ -15,6 +16,7 @@ const AllPages = () => {
       <About />
       <WhatWeDo />
       <Team/>
+      <Footer/>
     </div>
   );
 };
