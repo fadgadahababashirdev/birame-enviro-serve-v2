@@ -2,6 +2,10 @@ import React from 'react';
 import { IoBicycleSharp } from 'react-icons/io5';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { IoIosTabletPortrait } from 'react-icons/io';
+import { ImMobile2 } from 'react-icons/im';
+import { SlBadge } from 'react-icons/sl';
+import { SlNotebook } from 'react-icons/sl';
+import { SlSpeedometer } from 'react-icons/sl';
 import './styles.css';
 
 const Resource = () => {
@@ -9,14 +13,14 @@ const Resource = () => {
     <div className="py-30" id="Resource">
       <div className="my-3 ml-3 flex items-center justify-center">
         {' '}
-        <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />
+        <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold " />
         <h1 className="mx-5 text-2xl text-gray-400 md:text-4xl">Resources</h1>
       </div>
-      <div className="blue grid p-5 bg-slate-50 gap-3 grid-cols-1  md:grid-cols-2 px-12 lg:grid-cols-3">
+      <div className="blue grid p-5 bg-slate-50 gap-3 grid-cols-1  md:grid-cols-2 px-12 lg:grid-cols-3 ">
         {/* conservation of natural landScapes */}
-        <div className="card white p-5 bg-white lg:py-32">
+        <div className="card white p-5 bg-white lg:py-12">
           <div className="content">
-            <IoBicycleSharp className="icon text-3xl mb-3 text-gray-400" />
+            <IoBicycleSharp className="icon text-3xl mb-3 text-gray-400 lg:text-5xl" />
             <h1 className="text-2xl font-semibold text-slate-600 mb-5">
               Conservation of natural landscapes
             </h1>
@@ -29,9 +33,9 @@ const Resource = () => {
         </div>
         {/* conservation of natural landScapes */}
         {/* Research on the response of wildlife to environmental changes */}
-        <div className="card white p-5 bg-cyan-500 lg:py-32">
+        <div className="card white p-5 bg-cyan-500 lg:py-12">
           <div className="content">
-            <IoBicycleSharp className="icon text-3xl mb-3 text-white" />
+            <ImMobile2 className="icon text-3xl mb-3 text-white lg:text-5xl" />
             <h1 className="text-2xl font-semibold text-white mb-5">
               Research on the response of wildlife to environmental changes
             </h1>
@@ -45,9 +49,9 @@ const Resource = () => {
         {/* Research on the response of wildlife to environmental changes */}
 
         {/* Advocacy for threatened ecosystems */}
-        <div className="card white p-5 bg-white lg:py-32">
+        <div className="card white p-5 bg-white lg:py-12">
           <div className="content">
-            <IoBicycleSharp className="icon text-3xl mb-3 text-gray-400" />
+            <SlBadge className="icon text-3xl mb-3 text-gray-400 lg:text-5xl" />
             <h1 className="text-2xl font-semibold text-slate-600 mb-5">
               Advocacy for threatened ecosystems
             </h1>
@@ -60,9 +64,9 @@ const Resource = () => {
         </div>
         {/* Advocacy for threatened ecosystem */}
         {/* Conservation education through story-telling and arts */}
-        <div className="card white p-5 bg-white lg:py-32">
+        <div className="card white p-5 bg-white lg:py-12">
           <div className="content">
-            <IoBicycleSharp className="icon text-3xl mb-3 text-gray-400" />
+            <SlNotebook className="icon text-3xl mb-3 text-gray-400 lg:text-5xl" />
             <h1 className="text-2xl font-semibold text-slate-600 mb-5">
               Conservation education through story-telling and Arts
             </h1>
@@ -76,9 +80,9 @@ const Resource = () => {
         {/* Conservation education through story-telling and arts */}
 
         {/* community livelihoods improvement */}
-        <div className="card white p-5 bg-white lg:py-32">
+        <div className="card white p-5 bg-white lg:py-12">
           <div className="content">
-            <IoBicycleSharp className="icon text-3xl mb-3 text-gray-400" />
+            <SlSpeedometer className="icon text-3xl mb-3 text-gray-400 lg:text-5xl" />
             <h1 className="text-2xl font-semibold text-slate-600 mb-5">
               Community livelihoods improvement
             </h1>
