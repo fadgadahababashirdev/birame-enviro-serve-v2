@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from '../components/Navbar/Navbar';
+// import Navbar from '../components/Navbar/Navbar';
 import Swiper from '../components/Swiper/Swiper';
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import Navbarr from '../components/Navbar/Navbarr';
 const SwiperAndNavbar = () => {
   const [scrolll, setScrolll] = useState(false);
 
@@ -22,7 +23,7 @@ const SwiperAndNavbar = () => {
           <Swiper />
         </div>
         <div className="absolute z-30 top-0 left-0">
-          <Navbar />
+         <Navbarr/>
         </div>
         <div className="absolute top-1/2  z-20">
           <h1 className="w-screen flex flex-col text-center text-4xl text-white md:text-4xl lg:text-5xl">
