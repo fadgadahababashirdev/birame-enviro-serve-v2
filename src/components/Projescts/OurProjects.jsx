@@ -1,10 +1,13 @@
 import React from 'react';
 import './styles.css';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
+
 const OurProjects = () => {
+  const projectData = useSelector((state) => state.project);
+
   return (
     <div
-      id="ourprojects"
       className="w-screen"
       style={{ marginTop: '5rem', marginBottom: '12rem' }}
     >
@@ -15,12 +18,15 @@ const OurProjects = () => {
           {/* the icon */}
           <FaLongArrowAltRight className="text-2xl " />
           {/* the page name */}
-          <h1 className="text-gray-600 font-bold md:text-5xl py-5">
+          <h1
+            className="text-gray-600 font-bold md:text-4xl py-5"
+            id="ourprojects"
+          >
             Our Projects
           </h1>
         </div>
         {/* page description */}
-        <h1 className=" text-gray-400 md:text-2xl px-6 lg:text-4xl text-center ">
+        <h1 className=" text-gray-400 md:text-2xl px-6 lg:text-2xl pl-12 pr-12 text-center ">
           Biodiversity within natural and human-altered landscapes in rural and
           urban areas is well conserved and derived ecosystem services are
           flourishing
@@ -28,119 +34,73 @@ const OurProjects = () => {
       </div>
       {/* end container of page name  , icon and descrioption */}
 
-      {/* projects container */}
-      <div className="w-screen grid pt-20 place-items-center p-5 gap-3 grid-cols-1 px-4 bg-zinc-50  md:grid-cols-2 lg:grid-cols-3">
-        {/* first grid  */}
-        <div className="my-4">
-          {/* image */}
-          <img
-            src="../public/ProjectsFiles/mashyoza1.jpeg"
-            alt="lantana image not found"
-            className="rounded-lg "
-          />
-          {/* project title */}
-          <h1 className="text-sky-950 font-semibold my-3 md:text-2xl ">
-            Conserving remnant ecosystem
-          </h1>
-          {/* project description */}
-          <p className="text-gray-400 md:text-xl font-medium pr-3">
-            We monitor the biodiversity of remnant ecosystems, such as the
-            rainforest of Busaga, the gallery forest of Mashyoza and the
-            riparian forest of protected lakes.
-          </p>
-        </div>
-        {/* end of first grid */}
+      {/* page container */}
 
-        {/* second grid  */}
-        <div className="my-4">
-          {/* image */}
-          <img
-            src="../public/ProjectsFiles/restoration1.jpeg"
-            alt="lantana image not found"
-            className="rounded-lg "
-          />
-          {/* project title */}
-          <h1 className="text-sky-950 font-semibold my-3 md:text-2xl ">
-            Restoring landscapes
-          </h1>
-          {/* project description */}
-          <p className="text-gray-400 md:text-xl font-medium pr-3">
-            We contribute to national goals of forest landscape restoration, and
-            we lay emphasis on growing indigenous trees due to their crucial
-            roles of supporting biodiversity and carbon sequestratio
-          </p>
-        </div>
-
-        {/* second grid */}
-
-        {/* third grid  */}
-        <div className="my-4">
-          {/* image */}
-          <img
-            src="../public/ProjectsFiles/Lantana1.JPG"
-            alt="lantana image not found"
-            className="rounded-lg "
-          />
-          {/* project title */}
-          <h1 className="text-sky-950 font-semibold my-3 md:text-2xl ">
-            Managing invasive species
-          </h1>
-          {/* project description */}
-          <p className="text-gray-400 md:text-xl font-medium pr-3">
-            We raise public awareness on the invasion of Lantana camara in
-            native and exotic woodlands and advocate for its removal from the
-            flower market
-          </p>
-        </div>
-        {/* end of third grid  */}
-
-        {/* fourth grid  */}
-        <div className="my-4">
-          {/* image */}
-          <img
-            src="../public/ProjectsFiles/birds.png"
-            alt="lantana image not found"
-            className="rounded-lg "
-          />
-          {/* project title */}
-          <h1 className="text-sky-950 font-semibold my-3 md:text-2xl ">
-            Bird naming protocol
-          </h1>
-          {/* project description */}
-          <p className="text-gray-400 md:text-xl font-medium pr-3">
-            We lead the monumental project of documenting and assigning
-            Kinyarwanda names of all bird species of Rwanda (Slightly over 700)
-            in a bid to ignite the human-nature connection and to safeguard
-            associated traditions
-          </p>
-        </div>
-
-        {/* fourth grid  */}
+      <div
+        className="w-screenrounded-lg px-1 py-12 grid grid-cols-1  gap-2 my-12 md:grid-cols-2  mx-6 lg:grid-cols-3   "
+        id="pro"
+      >
+        {projectData.map((project) => (
+          <div key={project.id}>
+            <div
+              className=""
+              style={{ height: '22rem', width: '100%', borderRadius: '12px' }}
+            >
+              <img
+                src={project.image}
+                alt="image not found"
+                className="w-full h-full object-cover"
+                style={{ borderRadius: '12px' }}
+              />
+            </div>
+            <p className="font-semibold my-3 text-slate-900 md:text-2xl">
+              {project.heading}
+            </p>
+            <p className="text-gray-400 font-semibold md:text-xl">
+              {project.description}
+            </p>
+          </div>
+        ))}
       </div>
-      <div className="grid grid-cols-1 gap-4 px-3 md:grid-cols-2 ">
-        <div className="bg-red-500  justify-center flex">
-          <iframe
-            // width="560"
-            height="400"
-            className="object-cover w-full"
-            src="https://www.youtube.com/embed/BNlJS-F-Oio?si=HvMkF6Iy19Sj98Hp&amp;start=1673"
-            title="CoEB WEEKLY SEMINAR SERIES on Developing a bird-naming protocol for the long-term conservation ."
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+
+      {/* end of page container */}
+      <div>
+        <div className="my-12 ml-3 flex items-center justify-center">
+          {' '}
+          <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold " />
+          <h1 className="mx-5 text-2xl text-gray-400 md:text-4xl" id="Resource">
+            Resources
+          </h1>
         </div>
-        <div className="bg-blue-400 justify-center flex ">
-          <iframe
-            // width="560"
-            height="400"
-            className="object-cover w-full"
-            src="https://www.youtube.com/embed/OFKQ9DMXO_E"
-            title="CoEB WEEKLY SEMINAR SERIES on Developing a bird-naming protocol for the long-term conservation ."
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+
+        <div
+          className="grid grid-cols-1 gap-4 px-1  md:grid-cols-2 mx-6 "
+          id="Resource"
+        >
+          <div className=" justify-center flex">
+            <iframe
+              // width="560"
+              height="400"
+              className="object-cover w-full"
+              src="https://www.youtube.com/embed/BNlJS-F-Oio?si=HvMkF6Iy19Sj98Hp&amp;start=1673"
+              title="CoEB WEEKLY SEMINAR SERIES on Developing a bird-naming protocol for the long-term conservation ."
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="bg-blue-400 justify-center flex ">
+            <iframe
+              // width="560"
+              height="400"
+              className="object-cover w-full"
+              src="https://www.youtube.com/embed/OFKQ9DMXO_E"
+              title="CoEB WEEKLY SEMINAR SERIES on Developing a bird-naming protocol for the long-term conservation ."
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
       {/* end of projects container */}

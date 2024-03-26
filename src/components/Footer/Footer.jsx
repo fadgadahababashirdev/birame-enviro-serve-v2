@@ -5,13 +5,11 @@ import { FaFacebookF } from 'react-icons/fa';
 import { IoLogoInstagram } from 'react-icons/io5';
 import { CiLocationOn } from 'react-icons/ci';
 import { IoCall } from 'react-icons/io5';
+import { MdOutlineEmail } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <div
-      className="bg-teal-700 w-screen mt-4 p-4 px-3 grid grid-cols-1 lg:grid-cols-3 pl-12 pr-12 py-30"
-      
-    >
+    <div className="bg-teal-700 w-screen mt-4 p-4 px-3 grid grid-cols-1 lg:grid-cols-3 pl-12 pr-12 py-30">
       {/* the links */}
       <ul className="text-white text-xl">
         <Link to="Swipper" smooth={true} duration={1000}>
@@ -37,6 +35,9 @@ const Footer = () => {
           <FaFacebookF className="text-white   text-2xl my-10 md:my-3 hover:text-gray-500" />
           <a href="https://www.instagram.com/inyoni_zacu/">
             <IoLogoInstagram className="text-white   text-2xl my-10 md:my-3 hover:text-gray-500" />
+          </a>
+          <a href="mailto:rurangwalaura8@gmail.com">
+            <MdOutlineEmail className="text-white   text-2xl my-10 md:my-3 hover:text-gray-500" />
           </a>
         </div>
       </div>

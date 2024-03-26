@@ -9,7 +9,7 @@ const Team = () => {
         <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />
         <h1 className="mx-5 text-2xl text-gray-400 md:text-2xl">Our Team</h1>
       </div>
-      <div className="grid grid-cols-1  mt-12 mx-3 pb-32 gap-3 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1  mt-12 mx-3 pb-32 gap-3 md:grid-cols-2 lg:grid-cols-3 " id="pro">
         {/* card container */}
         <div className="">
           {/* card */}

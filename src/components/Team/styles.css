@@ -18,3 +18,11 @@
     opacity:1;
 }
 
+
+@media screen and (min-width:1280px){
+    #pro {
+        /* background-color: aquamarine; */
+        padding-left: 5rem ;
+        padding-right: 5rem;
+    }
+}

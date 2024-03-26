@@ -23,14 +23,17 @@ const WhatWeDo = () => {
   };
 
   return (
-    <div className="mt-12"id="whatwedo">
+    <div className="mt-12" id="whatwedo">
       <div className="mt-12 ml-3 flex items-center justify-center">
         {' '}
         <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />
         <h1 className="mx-5 text-2xl text-gray-400 md:text-2xl">What We Do</h1>
       </div>
       <div className="relative">
-        <div className=" grid  grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-12 px-3 ">
+        <div
+          className=" grid  grid-cols-1 gap-3  md:grid-cols-2 mx-6 lg:grid-cols-3 mt-12"
+          id="pro"
+        >
           {/* mapping array of what we do */}
           {relo.map((singleDo) => (
             <div className="" key={singleDo.id}>

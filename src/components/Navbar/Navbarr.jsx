@@ -23,7 +23,7 @@ const Navbarr = () => {
       <header
         className={
           scroll
-            ? 'bg-white header border-b border-gray-900 fixed left-0 top-0 z-50 md:py-10'
+            ? 'bg-white header border-b border-white fixed left-0 top-0 z-50 md:py-10'
             : 'header border-b border-gray-900 left-0 top-0 fixed z-50 md:py-10'
         }
       >
@@ -32,7 +32,7 @@ const Navbarr = () => {
             <img
               src="../public/ProjectsFiles/logo-compressed.png"
               alt="image not found"
-              className="w-30 h-12"
+              className="w-36 h-full  pl-6"
             ></img>
           )}
         </a>
@@ -42,7 +42,7 @@ const Navbarr = () => {
           <RiMenu2Line id="menu" />
           <FaTimes id="close" />
         </label>
-        <nav className="navbar">
+        <nav className="navbar pr-40">
           <Link to="aboutus" smooth={true} duration={1000}>
             {' '}
             <a
@@ -56,7 +56,7 @@ const Navbarr = () => {
               ABOUT US
             </a>
           </Link>
-          <Link to="whatwedo" smooth={true} duration={true}>
+          <Link to="whatwedo" smooth={true} duration={1000}>
             <a
               href=""
               className={
@@ -68,7 +68,7 @@ const Navbarr = () => {
               WHAT WE DO
             </a>
           </Link>
-          <Link to="ourprojects" smooth={true} duration={true}>
+          <Link to="ourprojects" smooth={true} duration={1000}>
             <a
               href=""
               className={
@@ -80,7 +80,7 @@ const Navbarr = () => {
               PROJECTS
             </a>
           </Link>
-          <Link to="team" smooth={true} duration={true}>
+          <Link to="team" smooth={true} duration={1000}>
             <a
               href=""
               className={
@@ -92,7 +92,7 @@ const Navbarr = () => {
               TEAM
             </a>
           </Link>
-          <Link to="Resource" smooth={true} duration={true}>
+          <Link to="Resource" smooth={true} duration={1000}>
             <a
               href=""
               className={
@@ -104,7 +104,7 @@ const Navbarr = () => {
               RESOURCES
             </a>
           </Link>
-          <Link to="donate" smooth={true} duration={true}>
+          <Link to="donate" smooth={true} duration={1000}>
             <a
               href=""
               className={

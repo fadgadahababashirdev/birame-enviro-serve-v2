@@ -7,18 +7,19 @@ import WhatWeDo from '../components/WhatWeDo/WhatWeDo';
 import Team from '../components/Team/Team';
 import Footer from '../components/Footer/Footer';
 
+import NewTeam from '../components/Team/NewTeam';
 
 const AllPages = () => {
   return (
     <div>
-    
       <SwiperAndNavbar />
       <OurProjects />
       <Resource />
       <About />
       <WhatWeDo />
-      <Team/>
-      <Footer/> 
+      <NewTeam />
+      {/* <Team />
+      <Footer /> */}
     </div>
   );
 };
