@@ -87,21 +87,23 @@ const NewTeam = () => {
 
         {model && (
           <div
-            className="fixed top-0  left-0 w-full flex  h-screen items-center  justify-center px-4"
+            className="fixed top-0  left-0 w-full flex  h-screen items-center  justify-center px-4 "
             style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
           >
-            <div className="bg-white px-5 py-3 text-sm  w-fit md:w-2/3 lg:w-3/6">
+            <div className="bg-white px-5 py-3 md:py-10 text-sm  w-fit md:w-2/3  lg:w-3/6">
               {/* header  */}
               <div className="flex justify-between">
                 <div>
                   {' '}
-                  <h1 className="text-gray-900 font-bold pb-3">{name}</h1>
-                  <h2 className="text-gray-800 pb-3 font-semibold text-md">
+                  <h1 className="text-gray-900 font-bold pb-3 md:text-2xl">
+                    {name}
+                  </h1>
+                  <h2 className="text-gray-800 pb-3 font-semibold text-md md:text-xl">
                     {position}
                   </h2>
                 </div>
                 <span
-                  className="font-bold text-gray-500 cursor-pointer "
+                  className="font-bold text-gray-500 cursor-pointer md:text-2xl "
                   onClick={() => setModel(!model)}
                 >
                   Hide
@@ -110,7 +112,7 @@ const NewTeam = () => {
 
               {/* details */}
               <div>
-                <p className="text-gray-400">{details}</p>
+                <p className="text-gray-500 md:text-1xl">{details}</p>
               </div>
               {/* details */}
               {/* end of header */}
@@ -120,8 +122,7 @@ const NewTeam = () => {
       </div>
 
       <div>
-        <Footer/>
-
+        <Footer />
       </div>
     </div>
   );

@@ -10,8 +10,7 @@ const About = () => {
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
       }}
-
-      id='aboutus'
+      id="aboutus"
     >
       <div className="bg-black opacity-30 w-full h-full absolute top-0 z-10"></div>
       <div className="absolute top-0 z-10 text-center mt-12">
