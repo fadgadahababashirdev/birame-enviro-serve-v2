@@ -9,7 +9,7 @@ import { MdOutlineEmail } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <div className="bg-teal-700 w-screen mt-4 p-4 px-3 grid grid-cols-1 lg:grid-cols-3 pl-12 pr-12 py-30">
+    <div className="bg-teal-700 w-screen mt-4 p-4 px-3 grid grid-cols-1 lg:grid-cols-3 pl-20 pr-20  py-30">
       {/* the links */}
       <ul className="text-white text-xl">
         <Link to="Swipper" smooth={true} duration={1000}>
@@ -28,12 +28,12 @@ const Footer = () => {
       {/* contact us */}
       <div>
         <div className="mt-5">
-          <a href="https://twitter.com/BirameSociety">
+          <a href="https://twitter.com/BirameSociety" target="blank">
             <FaTwitter className="text-white   text-2xl my-10 md:my-3 hover:text-gray-500" />
           </a>
 
           <FaFacebookF className="text-white   text-2xl my-10 md:my-3 hover:text-gray-500" />
-          <a href="https://www.instagram.com/inyoni_zacu/">
+          <a href="https://www.instagram.com/inyoni_zacu/" target="blank">
             <IoLogoInstagram className="text-white   text-2xl my-10 md:my-3 hover:text-gray-500" />
           </a>
           <a href="mailto:rurangwalaura8@gmail.com">

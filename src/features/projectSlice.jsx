@@ -22,6 +22,13 @@ const initialState = [
     description:
       'We raise public awareness on the invasion of Lantana camara in native and exotic woodlands and advocate for its removal from the flower market',
   },
+  {
+    id: nanoid(),
+    image: '../public/projectsFiles/bird1.png',
+    heading: 'Bird Naming Protocal',
+    description:
+      ' We lead the monumental project of documenting and assigning Kinyarwanda names of all bird species of Rwanda (Slightly over 700)in a bid to ignite the human-nature connection and to safeguard associated traditions',
+  },
 ];
 
 export const projectSlice = createSlice({

@@ -37,11 +37,11 @@ const OurProjects = () => {
       {/* page container */}
 
       <div
-        className="w-screenrounded-lg px-1 py-12 grid grid-cols-1  gap-2 my-12 md:grid-cols-2  mx-6 lg:grid-cols-3   "
+        className="w-screenrounded-lg px-1 py-12 grid grid-cols-1  gap-2 my-12 md:grid-cols-2 gap-3  mx-6 lg:grid-cols-3   "
         id="pro"
       >
         {projectData.map((project) => (
-          <div key={project.id}>
+          <div key={project.id} className="my-5">
             <div
               className=""
               style={{ height: '22rem', width: '100%', borderRadius: '12px' }}
