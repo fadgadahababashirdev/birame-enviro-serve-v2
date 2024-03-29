@@ -3,7 +3,7 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 const initialState = [
   {
     id: nanoid(),
-    image:"../public/Team/laura-cropped.png",
+    image:"../Team/laura-cropped.png",
     names: 'Dr Rurangwa Laure',
     position: 'Executive Director',
     details:
@@ -11,7 +11,7 @@ const initialState = [
   },
   {
     id: nanoid(),
-    image:"../public/Team/protais2.jpeg",
+    image:"../Team/protais2.jpeg",
     names: 'Niyigaba Protais',
     position: 'Research and restoration Manager',
     details:
@@ -19,7 +19,7 @@ const initialState = [
   },
   {
     id: nanoid(),
-    image:"../public/Team/Eric-Kayiranga.jpg",
+    image:"../Team/Eric-Kayiranga.jpg",
     names: 'Kayiranga Eric',
     position: 'Tourism development Lead',
     details:
@@ -28,14 +28,14 @@ const initialState = [
   {
     id: nanoid(),
     names: 'Mazimpaka Aline',
-    image:"../public/Team/Aline_Mazimpaka.jpeg",
+    image:"../Team/Aline_Mazimpaka.jpeg",
     position: 'Mental health and Youth empowerment Manager',
     details:
       'Aline holds a Bachelor’s degree in Social work from the National University of Rwanda and brings over 5 years of teaching and practicing mindfulness for community empowerment.  Aline is the first female yoga teacher born and raised in Rwanda, and she has played a huge role in introducing yoga and mindfulness practices to the Rwandan community. From her own experience, she believes yoga can play a huge role to heal Rwandans from psychological and emotional trauma. She has a 200 hours certification from Africa yoga Project, 200 hours certification from Zanzi yoga, and a 300 hours certification from Jivamkti yoga, as well as a 40 hours prenatal certification. She undertook her meditation training under the guidance of World Peace Initiative in Thailand. Aline serves as the project manager of Ituze Mindfulness and Meditation Community, a center that is fully dedicated to teaching yoga and other mindfulness practices.',
   },
   {
     id: nanoid(),
-    image:"../public/Team/yves_tuyishime.jpeg",
+    image:"../Team/yves_tuyishime.jpeg",
     names: 'Tuyishime Yves',
     position: 'Communication and media Lead',
     details:
@@ -43,7 +43,7 @@ const initialState = [
   },
   {
     id: nanoid(),
-    image:"../public/Team/Bisangwa_Nganji.jpg",
+    image:"../Team/Bisangwa_Nganji.jpg",
     names: 'Bisangwa Benjamin ',
     position: 'Conservation education Lead',
     details:
