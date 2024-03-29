@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector} from 'react-redux';
 import Footer from '../Footer/Footer';
 const NewTeam = () => {
   const data = useSelector((state) => state.team);
