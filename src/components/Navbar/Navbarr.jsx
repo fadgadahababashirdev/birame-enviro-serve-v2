@@ -24,7 +24,7 @@ const Navbarr = () => {
         className={
           scroll
             ? 'bg-white header border-b border-white fixed left-0 top-0 z-50 md:py-10'
-            : 'header border-b border-gray-900 left-0 top-0 fixed z-50 md:py-10'
+            : 'header border-b  left-0 top-0 fixed z-50 md:py-10'
         }
       >
         <a href="" className="logo">
@@ -49,8 +49,8 @@ const Navbarr = () => {
               href=""
               className={
                 scroll
-                  ? 'text-gray-900 text-xl font-semibold'
-                  : 'text-black lg:text-white  text-xl '
+                  ? 'text-gray-900 text-lg font-semibold'
+                  : 'text-black lg:text-white  text-lg '
               }
             >
               ABOUT US
@@ -61,8 +61,8 @@ const Navbarr = () => {
               href=""
               className={
                 scroll
-                  ? 'text-gray-900 text-xl font-semibold'
-                  : 'text-black lg:text-white  text-xl'
+                  ? 'text-gray-900 text-lg font-semibold'
+                  : 'text-black lg:text-white  text-lg'
               }
             >
               WHAT WE DO
@@ -73,8 +73,8 @@ const Navbarr = () => {
               href=""
               className={
                 scroll
-                  ? 'text-gray-900 text-xl font-semibold'
-                  : 'text-black lg:text-white  text-xl'
+                  ? 'text-gray-900 text-lg font-semibold'
+                  : 'text-black lg:text-white  text-lg'
               }
             >
               PROJECTS
@@ -85,8 +85,8 @@ const Navbarr = () => {
               href=""
               className={
                 scroll
-                  ? 'text-gray-900 text-xl font-semibold'
-                  : 'text-black lg:text-white  text-xl'
+                  ? 'text-gray-900 text-lg font-semibold'
+                  : 'text-black lg:text-white  text-lg'
               }
             >
               TEAM
@@ -97,8 +97,8 @@ const Navbarr = () => {
               href=""
               className={
                 scroll
-                  ? 'text-gray-900 text-xl font-semibold'
-                  : 'text-black lg:text-white  text-xl'
+                  ? 'text-gray-900 text-lg font-semibold'
+                  : 'text-black lg:text-white  text-lg'
               }
             >
               RESOURCES
@@ -109,8 +109,8 @@ const Navbarr = () => {
               href=""
               className={
                 scroll
-                  ? 'text-gray-900 text-xl font-semibold'
-                  : 'text-black pb-3 lg:text-white  text-xl'
+                  ? 'text-gray-900 text-lg font-semibold'
+                  : 'text-black pb-3 lg:text-white  text-lg'
               }
             >
               DONATE
