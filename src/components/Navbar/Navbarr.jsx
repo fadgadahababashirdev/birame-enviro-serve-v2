@@ -30,7 +30,7 @@ const Navbarr = () => {
         <a href="" className="logo">
           {scroll && (
             <img
-              src="../ProjectsFiles/logo-compressed.png"
+              src="../logo nganji.png"
               alt="image not found"
               className="w-36 h-full  pl-6"
             ></img>
