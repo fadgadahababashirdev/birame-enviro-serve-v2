@@ -7,18 +7,19 @@ import { CiLocationOn } from 'react-icons/ci';
 import { IoCall } from 'react-icons/io5';
 import { MdOutlineEmail } from 'react-icons/md';
 
+
 const Footer = () => {
   return (
-    <div className="bg-teal-700 w-screen mt-4 p-4 px-3 grid grid-cols-1 lg:grid-cols-3 pl-20 pr-20  py-30">
+    <div className="bg-teal-700 w-screen mt-40 md:mt-[220px] p-4 px-[100px] grid grid-cols-1 lg:grid-cols-3 pl-20 pr-20  py-30 ">
       {/* the links */}
       <ul className="text-white text-xl">
-        <Link to="Swipper" smooth={true} duration={1000}>
+        <Link to="home" smooth={true} duration={1000}>
           <li className="my-3 cursor-pointer">Home</li>
         </Link>
-        <Link to="ourprojects" smooth={true} duration={1000}>
+        <Link to="projects" smooth={true} duration={1000}>
           <li className="my-3 cursor-pointer">Projects</li>
         </Link>
-        <Link to="aboutus" smooth={true} duration={1000}>
+        <Link to="about" smooth={true} duration={1000}>
           <li className="my-3 cursor-pointer">About us</li>
         </Link>
       </ul>

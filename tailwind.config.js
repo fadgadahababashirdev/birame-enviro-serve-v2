@@ -3,7 +3,13 @@ export default {
   content: ["./index.html",
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        sora:["Sora" , "sans-serif"] , 
+        popu:["Poppins" , "sans-serif"]
+
+      }
+    },
   },
   plugins: [],
 }

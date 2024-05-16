@@ -1,123 +1,90 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { FaLongArrowAltRight } from 'react-icons/fa';
-import './styles.css';
+import { useState } from 'react';
+
 const WhatWeDo = () => {
-  const relo = useSelector((state) => state.dos);
+  const [hoverId, sethoverId] = useState(null);
   const [model, setModel] = useState(false);
-  const [head, setHead] = useState('');
-  const [spann, setSpann] = useState('');
-  const [pOne, setPOne] = useState('');
-  const [pTwo, setPTwo] = useState('');
+  const [readMore, setReadMore] = useState(null);
+  const [heading, setHeading] = useState(null);
+  const [paragraph, setParagraph] = useState(null);
+  const [description, setDescription] = useState(null);
+  const why = useSelector((state) => state.what);
 
   const handleData = (id) => {
-    const filteredData = relo.filter((item) => item.id === id);
+    const filteredData = why.filter((does) => does.id === id);
     if (filteredData.length > 0) {
-      const h3Value = setHead(filteredData[0].h3);
-      const span = setSpann(filteredData[0].span);
-      const paragraphOne = setPOne(filteredData[0].p1);
-      const paragraphTwo = setPTwo(filteredData[0].p2);
-    } else {
-      console.log('No data found for the provided id:', id);
+      setHeading(filteredData[0].heading);
+      setParagraph(filteredData[0].paragraph);
+      setDescription(filteredData[0].description);
     }
+    console.log('We could not find that id');
   };
 
   return (
-    <div className="mt-12" id="whatwedo">
-      <div className="mt-12 ml-3 flex items-center justify-center">
-        {' '}
-        <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />
-        <h1 className="mx-5 text-2xl text-gray-400 md:text-2xl">What We Do</h1>
-      </div>
-      <div className="relative">
-        <div
-          className=" grid  grid-cols-1 gap-3  md:grid-cols-2 mx-6 lg:grid-cols-3 mt-12"
-          id="pro"
-        >
-          {/* mapping array of what we do */}
-          {relo.map((singleDo) => (
-            <div className="" key={singleDo.id}>
-              <h1>{singleDo.paragraphOne}</h1>
-              <div className="content bg-black h-full w-full">
-                <img
-                  src={singleDo.image}
-                  alt="the image could not be found"
-                  className="object-cover w-full h-full"
-                />
-                <div className="theblackdiv flex">
-                  {' '}
+    <div className="relative mt-[5rem] md:mt-[160px]" id="what">
+      <h1 className='font-sora text-gray-600 font-semibold md:text-[30px] text-center my-12'>WHAT WE DO</h1>
+      <div className="grid  md:grid-cols-2 lg:grid-cols-3 md:px-[100px] md:gap-4">
+        {why.map((singleWhat) => (
+          <div
+            className="relative my-[20px] md:my-0"
+            key={singleWhat.id}
+            onMouseEnter={() => sethoverId(singleWhat.id)}
+            onMouseLeave={() => sethoverId(null)}
+          >
+            <img
+              src={singleWhat.image}
+              alt="image not found"
+              className=" h-[15rem] md:h-[17rem] w-full"
+            />
+            {hoverId === singleWhat.id && (
+              <div className="bg-[rgba(0,0,0,0.45)] absolute top-0 left-0 w-full h-full z-10 text-white flex justify-center items-center">
+                <div>
                   <button
-                    className="border border-white p-3 white rounded-md text-white"
+                    className="border border-white p-2 rounded-md "
                     onClick={() => {
-                      setModel(true);
-                      handleData(singleDo.id);
+                      setReadMore(singleWhat.id);
+                      handleData(singleWhat.id);
+                      setModel(!model)
                     }}
                   >
-                    Explore more
+                    Read More
                   </button>
                 </div>
               </div>
-            </div>
-          ))}
-          {/* end of mapping array of what we do */}
-        </div>
-
-        {model && (
-          <div
-            className="top-0 left-0 fixed flex justify-center items-center"
-            style={{
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0,0,0,0.6)',
-            }}
-          >
-            {/* single we do  */}
-            <div
-              className="w-screen h-fit bg-white p-5 md:p-12"
-              style={{ width: '80%' }}
-            >
-              <div className="">
-                {/* heading and hide button */}
-                <div className="flex justify-between w-full">
-                  <div>
-                    {' '}
-                    <h1 className="text-md text-semibold text-slate-900 md:text-xl ">
-                      {head}
-                    </h1>
-                    <p className="mt-5">{spann}</p>
-                  </div>
-                  <h1
-                    onClick={() => setModel(!model)}
-                    className="cursor-pointer text-gray-500 font-bold"
-                  >
-                    Hide
-                  </h1>
-                </div>
-                {/* end of heading and hide button */}
-                {/* two paragraphs and line with empty div*/}
-                <div className="flex justify-between">
-                  {/* two paragraphs and line */}
-                  <div className="flex mt-5">
-                    <div>
-                      <p className="text-gray-400 text-semibold mb-2">{pOne}</p>
-
-                      <p className="text-gray-400 text-semibold mb-2">{pTwo}</p>
-                      <h1 className="text-slate-900 md:text-lg pt-4">
-                        Forests , Animals ,Birds{' '}
-                      </h1>
-                    </div>
-                    <div className="h-full w-1 bg-green-400 md:ml-12"></div>
-                  </div>
-                  <div className="md:w-80"></div>
-                </div>
-                {/* end of two paragraphs and line with empty div*/}
-              </div>
-            </div>
-
-            {/* end of single we do component */}
+            )}
           </div>
-        )}
+        ))}
       </div>
+      {model && (
+        <div className="bg-[rgba(0,0,0,0.6)] w-full flex justify-center items-center  h-screen md:h-full fixed top-0 left-0 z-10">
+          <div className=" md:p-[30px] p-[15px] mx-[20px] w-full md:w-1/2 bg-white">
+            <div className="flex justify-between">
+              <div className="md:my-[12px]">
+                <h1 className="text-slate-900 font-semibold text-[20px] md:font-semibold mt-[5px]">
+                  {heading}
+                </h1>
+                <p className="text-md">{paragraph}</p>
+              </div>
+
+              <div className="flex justify-end text-gray-400 font-semibold hover:text-green-400 cursor-pointer h-full  items-center md:mt-4"onClick={()=>setModel(!model)}>
+                Hide
+              </div>
+              {/* description */}
+            </div>
+
+            <div>
+              <p className="text-gray-400 font-semibold text-[10px] my-[6px] md:text-[13px] md:my-[12px]">
+                {description}
+              </p>
+            </div>
+
+            <div>
+              <h1>Forests , Animals</h1>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

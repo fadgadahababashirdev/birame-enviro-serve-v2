@@ -1,229 +1,78 @@
 import React from 'react';
-import { FaLongArrowAltRight } from 'react-icons/fa';
-import './styles.css';
+import { Slide, Bounce } from 'react-awesome-reveal';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 const Team = () => {
+  const team = useSelector((state) => state.team);
+
+  //   handle hoverId
+
+  const [hoverId, sethoverId] = useState(); 
+  const [model , setModel] = useState(false)
+  const [name , setName] = useState(null)
+  const [descript , setDescript] = useState(null)
+
+  const handleDetails = (id)=>{
+      const dataa = team.filter(teamu=>teamu.id === id)
+      setName(dataa[0].name)
+      setDescript(dataa[0].details)
+  }
+
   return (
-    <div className="mt-12"id="team">
-      <div className="my-3 ml-3 flex items-center justify-center">
-        {' '}
-        <FaLongArrowAltRight className="text-cyan-400 text-2xl font-bold" />
-        <h1 className="mx-5 text-2xl text-gray-400 md:text-2xl">Our Team</h1>
-      </div>
-      <div className="grid grid-cols-1  mt-12 mx-3 pb-32 gap-3 md:grid-cols-2 lg:grid-cols-3 " id="pro">
-        {/* card container */}
-        <div className="">
-          {/* card */}
+    <div className="flex flex-col justify-center w-full  md:mt-[160px]" id="team"> 
+     <h1 className='font-sora text-gray-600 font-semibold md:text-[30px] text-center my-12'>TEAM</h1>
+      <div className=":w-full relative  ">
+        <div className=" w-full  md:px-[100px] lg:px-[90px] flex justify-center mt-6">
+          <div className="grid  md:grid-cols-2  my-4 md:my-0  lg:grid-cols-3 md:gap-8">
+            {team.map((member, index) => (
+              <Bounce key={index}>
+                {' '}
+                <div
+                  className="w-screen h-[18rem] md:w-[19rem] lg:w-[15rem] md:h-[19rem]  lg:h-[15rem] relative"
+                  onMouseEnter={() => sethoverId(member.id)}
+                  onMouseLeave={() => sethoverId(null)}
+                >
+                  <img
+                    src={member.image}
+                    alt={`${member.name} image not found`}
+                    className=" h-full w-full object-cover my-4 md:my-0"
+                  />
 
-          <div className="w-full h-full image rounded-md">
-            <img
-              src="../public/Team/laura-cropped.png"
-              alt="image not found"
-              className="w-full h-full"
-            />
-            <div className="conte px-3 pb-10 flex w-full h-full items-end justify-between">
-              <div>
-                {/* name */}
-                <div className="flex gap-3  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1 "></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Dr Rurangwa Laure
-                  </h1>
+                  {hoverId === member.id && (
+                    <div className="absolute top-0 left-0 flex  w-full h-full bg-[rgba(0,0,0,0.6)]">
+                      <div className="flex h-full items-end w-full px-3  pb-[20px] justify-between">
+                        <div className="text-white">
+                          <p className="text-sm">{member.name}</p>
+                          <p className="text-sm">{member.title}</p>
+                        </div>
+                        <div className="">
+                          <button className="border border-cyan-400 bg-transparent px-2 ml-3 py-1 rounded-md text-white" onClick={()=>{
+                            handleDetails(member.id)
+                            setModel(!model)
+                          }}>
+                            Details
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-                {/*position*/}
-                <div className="flex gap-3 pt-4  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1"></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Executive Director
-                  </h1>
-                </div>
-              </div>
-              <div className="border border-cyan-300  px-4 py-1 rounded-md text-white">
-                Details
-              </div>
-            </div>
+              </Bounce>
+            ))}
           </div>
+        </div> 
 
-          {/* card end  */}
-        </div>
-        {/* end of card container */}
-
-        {/* second member  */}
-        {/* card container */}
-        <div className="">
-          {/* card */}
-
-          <div className="w-full h-full image">
-            <img
-              src="../public/Team/protais2.jpeg"
-              alt="image not found"
-              className="w-full h-full"
-            />
-            <div className="conte px-3 pb-10 flex w-full h-full items-end justify-between">
-              <div>
-                {/* name */}
-                <div className="flex gap-3  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1 "></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Niyigaba Protais
-                  </h1>
-                </div>
-                {/*position*/}
-                <div className="flex gap-3 pt-4  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1"></span>
-                  <h1 className="text-white pr-3 text-2xl text-sans">
-                    Research and Restoration Advisor
-                  </h1>
-                </div>
-              </div>
-              <div className="border border-cyan-300  px-4 py-1 rounded-md text-white">
-                Details
-              </div>
+       {
+        model &&  <div className='w-full h-screen md:h-full fixed top-0 left-0 z-20 flex justify-center bg-[rgba(0,0,0,0.6)] items-center px-4 md:px-0 md '>
+          <div className='bg-white md:w-1/2 flex justify-between p-6'>
+            <div>
+              <h1 className='text-slate-900 md:text-[20px] font-semibold md:mt-[5px]'>{name}</h1>
+              <p className=' text-xs md:text-sm mt-6 text-gray-500'>{descript}</p>
             </div>
+            <div className='flex justify-end text-gray-400 font-semibold hover:text-green-400 cursor-pointer h-full  items-center' onClick={()=>setModel(!model)}>Hide</div>
           </div>
-
-          {/* card end  */}
         </div>
-        {/* end of card container */}
-        {/* card container */}
-        <div className="">
-          {/* card */}
-
-          <div className="w-full h-full image">
-            <img
-              src="../public/Team/Eric-Kayiranga.jpg"
-              alt="image not found"
-              className="w-full h-full"
-            />
-            <div className="conte px-3 pb-10 flex w-full h-full items-end justify-between">
-              <div>
-                {/* name */}
-                <div className="flex gap-3  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1 "></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Kayiranga Eric
-                  </h1>
-                </div>
-                {/*position*/}
-                <div className="flex gap-3 pt-4  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1"></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Tourism Development Lead
-                  </h1>
-                </div>
-              </div>
-              <div className="border border-cyan-300  px-4 py-1 rounded-md text-white">
-                Details
-              </div>
-            </div>
-          </div>
-
-          {/* card end  */}
-        </div>
-        {/* end of card container */}
-        {/* card container */}
-        <div className="">
-          {/* card */}
-
-          <div className="w-full h-full image">
-            <img
-              src="../public/Team/Aline_Mazimpaka.jpeg"
-              alt="image not found"
-              className="w-full h-full"
-            />
-            <div className="conte px-3 pb-10 flex w-full h-full items-end justify-between">
-              <div>
-                {/* name */}
-                <div className="flex gap-3  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1 "></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Mazimpaka Aline
-                  </h1>
-                </div>
-                {/*position*/}
-                <div className="flex gap-3 pt-4  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1"></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Youth Empowerment Manager
-                  </h1>
-                </div>
-              </div>
-              <div className="border border-cyan-300  px-4 py-1 rounded-md text-white">
-                Details
-              </div>
-            </div>
-          </div>
-
-          {/* card end  */}
-        </div>
-        <div className="">
-          {/* card */}
-
-          <div className="w-full h-full image">
-            <img
-              src="../public/Team/yves_tuyishime.jpeg"
-              alt="image not found"
-              className="w-full h-full"
-            />
-            <div className="conte px-3 pb-10 flex w-full h-full items-end justify-between">
-              <div>
-                {/* name */}
-                <div className="flex gap-3  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1 "></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Tuyishime Yves
-                  </h1>
-                </div>
-                {/*position*/}
-                <div className="flex gap-3 pt-4  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1"></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Communication and Media Lead
-                  </h1>
-                </div>
-              </div>
-              <div className="border border-cyan-300  px-4 py-1 rounded-md text-white">
-                Details
-              </div>
-            </div>
-          </div>
-
-          {/* card end  */}
-        </div>
-        <div className="">
-          {/* card */}
-
-          <div className="w-full h-full image">
-            <img
-              src="../public/Team/Bisangwa_Nganji.jpg"
-              alt="image not found"
-              className="w-full h-full"
-            />
-            <div className="conte px-3 pb-10 flex w-full h-full items-end justify-between">
-              <div>
-                {/* name */}
-                <div className="flex gap-3  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1 "></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Bisangwa Benjamin
-                  </h1>
-                </div>
-                {/*position*/}
-                <div className="flex gap-3 pt-4  h-full items-center">
-                  <span className="bg-cyan-400 w-5 h-1"></span>
-                  <h1 className="text-white  text-2xl text-sans">
-                    Conservation Education Lead
-                  </h1>
-                </div>
-              </div>
-              <div className="border border-cyan-300  px-4 py-1 rounded-md text-white">
-                Details
-              </div>
-            </div>
-          </div>
-
-          {/* card end  */}
-        </div>
-        {/* end of card container */}
+       }
       </div>
     </div>
   );
